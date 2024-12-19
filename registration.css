@@ -9,7 +9,7 @@
 }
 
 .reg_back-dark {
-    background: url(../img/registration/background_dark.svg);
+    background: url(img/registration/background_dark.svg);
 }
 @media (max-width: 1060px) {
     .reg_back-dark {
