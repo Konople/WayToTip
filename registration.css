@@ -1,0 +1,84 @@
+/*Поле регистрации/авторизации*/
+.reg_back {
+    background: url(../img/background.svg) center top;
+}
+@media (max-width: 1060px) {
+    .reg_back {
+        background: none;
+    }
+}
+
+.reg_back-dark {
+    background: url(../img/background_dark.svg);
+}
+@media (max-width: 1060px) {
+    .reg_back-dark {
+        background: none;
+    }
+}
+
+.reg-pad {
+    padding: 8.4rem;
+}
+
+.reg-form {
+    box-shadow: 0 20px 60px rgba(80, 80, 80, 0.3);
+}
+@media (max-width: 1060px) {
+    .reg-form {
+        box-shadow: none;
+    }
+}
+
+.reg-block {
+    width: 600px;
+    padding: 30px 60px 30px 60px;
+}
+@media (max-width: 576px) {
+    .reg-block {
+        padding: 15px;
+    }
+}
+
+.form-floating>label {
+    top: 11px;
+    left: -13px;
+    transform-origin: 0px -200px;
+}
+
+.form-floating>.form-control {
+    padding: 1rem 0;
+}
+
+.form-control {
+    border: none;
+    border-radius: 0px;
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+.form-check-label {
+    font-size: 10px;
+}
+
+
+.pass {
+    color: grey;
+}
+.pass:hover {
+    color: rgb(65, 156, 245);
+}
+
+.send-b {
+    background-color: rgb(65, 156, 245);
+    color: white;
+}
+.send-b:hover {
+    background-color: rgb(65, 156, 245);
+    color: white;
+}
+.send-b:active {
+    border: none;
+}

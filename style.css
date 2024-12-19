@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&display=swap');
+
+@font-face {
+    font-family: "Equinox";
+    src: url(fonts/Equinox\ Bold.ttf);
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Golos Text", sans-serif;
+}
+
+.cartinka {
+    pointer-events: none;
+}
+
+@media (max-width: 576px) {
+    .tip-text {
+        text-align: center;
+    }
+}
+
+/*Переключатель тем*/
+.theme-color, .theme-color-under {
+    background-color: rgb(65, 156, 245);
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+}
+.bi {
+    width: 25px;
+    height: 25px;
+}
+.theme-color:hover, .theme-color-under:hover {
+    background-color: rgb(49, 118, 186);
+}
+
+
+
+/*Шапка*/
+.name, .name_under {
+    color: rgb(65, 156, 245);
+    font-family: "Equinox";
+    font-weight: bold;
+    font-size: 28px;
+    text-decoration: none;
+}
+.name:hover {
+    color: #007cca;
+    transition: ease-in-out .25s;
+}
+
+.theme-color, .reg-m, .name {
+    margin: 0 45px;
+}
+
+@media (max-width: 1024px) {
+    .theme-color, .reg-m, .name {
+        margin: 0 15px;
+    }
+}
+
+@media (max-width: 321px) {
+    .theme-color, .reg-m, .name {
+        margin: 0 1px;
+    }
+}
+
+.regist {
+    border-radius: 30px;
+    background-color: rgb(65, 156, 245);
+    padding: 10px 40px;
+    box-shadow: 0 5px 10px rgb(65, 156, 245);
+    font-weight: 600;
+}
+.regist:hover {
+    background-color: rgb(51, 123, 194);
+}
+
+.btn-primary {
+    --bs-btn-active-bg: rgb(65, 156, 245);
+}
+
+@media (max-width: 431px) {
+    .regist-phone {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+
+
+/*Краткое описание услуги*/
+main {
+    padding: 75px;
+}
+
+.tiptext h1 {
+    font-weight: 600;
+    font-size: 48px;
+}
+.tiptext p {
+    font-weight: 400;
+    font-size: 22px;
+    color: rgb(65, 156, 245);
+}
+
+@media (max-width: 576px) {
+    .tiptext {
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .tip {
+        width: 80%;
+    }
+}
+
+
+
+/*Пошаговое описание работы сервиса*/
+h2 {
+    font-weight: 600;
+    font-size: 42px;
+    margin-bottom: 50px;
+}
+
+.desc {
+    padding: 14px;
+    border: 2px solid rgb(65, 156, 245);
+    border-radius: 10px;
+    text-align: start;
+}
+
+@media (max-width: 431px) {
+    .step {
+        width: 60%;
+    }
+}
+
+.desc-1 {
+    box-shadow: -7px 7px 0px rgb(65, 156, 245);
+}
+.desc-2 {
+    box-shadow: 0 7px 0px rgb(65, 156, 245);
+}
+.desc-3 {
+    box-shadow: 7px 7px 0px rgb(65, 156, 245);
+}
+
+.desc h5 {
+    font-weight: 500;
+}
+
+.desc p {
+    font-weight: 400;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .desc-1, .desc-3 {
+        box-shadow: 0 7px 0px rgb(65, 156, 245);
+    }
+}
+
+
+
+/*Оплата через сервисы*/
+.pay_back {
+    box-shadow: 0 0 10px rgb(65, 156, 245);
+    border: 2px solid rgb(65, 156, 245);
+    border-radius: 10px;
+}
+
+.pay_text h2 {
+    margin: 0px 0px 10px 0px;
+}
+
+
+
+/*Применение сервиса*/
+.jobs a {
+    border: 1px solid rgb(65, 156, 245);
+    box-shadow: 0 5px 0 rgb(65, 156, 245);
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.jobs a:active {
+    border: none;
+}
+
+.jobs a:hover {
+    box-shadow: 0 5px 10px rgb(65, 156, 245);
+}
+
+.prof {
+    padding: 15px;
+}
+
+
+
+/*Для администраторов*/
+.admin {
+    background: none;
+    border: none;
+    font-style: italic;
+    color: rgb(65, 156, 245);
+}
+
+
+
+/*Где использовать QR-код?*/
+
+
+
+
+/*Плюсы сервиса*/
+
+
+
+
+/*Начало*/
+.lets {
+    background-color: rgb(65, 156, 245);
+}
+
+.regist_2 {
+    border-radius: 30px;
+    background-color: white;
+    color: black;
+    padding: 10px 40px;
+    font-weight: 600;
+}
+.regist_2:hover {
+    background-color: white;
+    color: black;
+}
+
+
+
+/*Вопрос-ответ*/
+.question {
+    box-shadow: 0 0 10px rgb(65, 156, 245);
+    color: #007cca;
+    font-size: 20px;
+}
+.question.blue {
+    background-color: rgb(65, 156, 245);
+    color: white;
+}
+
+
+
+/*Подвал*/
+.under {
+    background-color: #17212b;
+}
+
+.menu-under {
+    font-size: 16px;
+}
+
+.under_info {
+    color: rgb(170, 170, 170);
+    text-decoration: none;
+    font-size: 12px;
+}
+.under_info:hover {
+    color: rgb(170, 170, 170);
+}

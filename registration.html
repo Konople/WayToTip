@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+    <script src="/docs/5.3/assets/js/color-modes.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="public/css/registration.css">
+    <title>Регистрация</title>
+</head>
+<body>
+
+    <!--Поле регистрации-->
+    <div class="d-flex justify-content-center align-items-center reg-pad reg_back">
+        <div id="open" class="reg-block bg-body rounded-4 text-center reg-form">
+            <h2 class="mb-4 fw-medium">Регистрация</h2>
+            <p class="mb-4">Вы регистрируетесь как</p>
+            <div class="mb-4">
+                <button id="per" onclick="OpenForm()" class="w-100 btn send-b py-3 rounded-5 mb-2 fs-5 shadow">Получатель чаевых</button>
+            </div>
+            <div class="p-2">
+                <p class="m-0">или</p>
+            </div>
+            <div class="mb-4 mt-4">
+                <button id="oferta" onclick="OpenForm()" class="w-100 btn send-b py-3 rounded-5 mb-2 fs-5 shadow">Администратор</button>
+            </div>
+        </div>
+
+        <form action="#" method="post" id='OpenForm' class="reg-block bg-body rounded-4 text-center reg-form" style="display: none;">
+            <h2 class="mb-4 fw-medium">Регистрация</h2>
+            <div class="form-floating mb-4 border-bottom">
+                <input type="text" class="form-control" name="name" placeholder="Введите имя" required>
+                <label for="name" class="form-label text-body-secondary">Имя</label>
+            </div>
+            <div class="form-floating mb-4 border-bottom">
+                <input type="email" class="form-control" name="email" placeholder="Введите почту" required>
+                <label for="email" class="form-label text-body-secondary">Почта</label>
+            </div>
+            <div class="form-floating mb-4 border-bottom">
+                <input type="tel" class="form-control phone" name="number" placeholder="Введите номер телефона" required>
+                <label for="number" class="form-label text-body-secondary">Номер телефона</label>
+            </div>
+            <div class="form-floating mb-4 border-bottom">
+                <input type="text" class="form-control" name="city" placeholder="Город" required>
+                <label for="city" class="form-label text-body-secondary">Город</label>
+            </div>
+            <div class="form-floating mb-4 border-bottom">
+                <input type="text" class="form-control" name="inn" placeholder="ИНН" required>
+                <label for="inn" class="form-label text-body-secondary">ИНН</label>
+            </div>
+            <div class="form-floating mb-4 border-bottom">
+                <input type="text" class="form-control" name="brand" placeholder="Торговая марка" required>
+                <label for="brand" class="form-label text-body-secondary">Торговая марка</label>
+            </div>
+            <div class="form-floating mb-4 border-bottom">
+                <input type="text" class="form-control" name="adress" placeholder="Адрес" required>
+                <label for="adress" class="form-label text-body-secondary">Адрес</label>
+            </div>
+            <div class="form-floating mb-4 d-flex align-items-center border-bottom">
+                <input type="password" class="form-control" name="password" id="password" placeholder="Пароль" required>
+                <label for="password" class="form-label text-body-secondary">Пароль</label>
+                <i class="bi bi-eye-slash" id="togglePassword" style="position:relative; top: 12px;"></i>
+            </div>
+            <div class="form-floating mb-4 d-flex align-items-center border-bottom">
+                <input type="newpassword" class="form-control" name="newpassword" id="newpassword" placeholder="Повторите пароль" required>
+                <label for="newpassword" class="form-label text-body-secondary">Повторите пароль</label>
+                <i class="bi bi-eye-slash" id="newtogglePassword" style="position:relative; top: 12px;"></i>
+            </div>
+            <p class="m-0 mb-1">Тип аккаунта</p>
+            <div class="mb-4 d-flex justify-content-around">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="rad" value="1" id="rad">
+                    <label class="form-check-label" for="rad1">Получатель чаевых</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="rad" value="5" id="rad2">
+                    <label class="form-check-label" for="rad2">Администратор</label>
+                </div>
+            </div>
+            <div class="text-start mb-4">
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                    <label class="form-check-label" for="defaultCheck1">
+                        Я ознакомился с Политикой обработки персональных данных и Согласием на их обработку, представленными на WayToTip.ru. Установка галочки подтверждает моё письменное согласие с изложенными условиями, а также мою готовность их соблюдать.
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+                    <label class="form-check-label" for="defaultCheck2">
+                        Я ознакомился с условиями Договора оферты. Установка галочки подтверждает моё письменное согласие с данным договором и мою готовность следовать его положениям.
+                    </label>
+                </div>
+            </div>
+            <button type="submit" class="w-100 btn py-3 rounded-5 mb-4 fs-6 shadow send-b">Зарегистрироваться</button>
+            <div class="mb-2 d-flex justify-content-between align-items-center">
+                <button type="submit" onclick="resetForm()" class="fw-bold btn border-0">Отмена</button>
+                <a href="login.html" class="fw-bold text-decoration-none text-body">Авторизация</a>
+            </div>
+        </form>
+    </div>
+
+
+
+    <!--Подвал-->
+    <footer class="footer mt-auto under p-3 text-center">
+        <div class="row align-items-center px-3">
+            <div class="col-md-2 d-flex flex-column flex-wrap mb-2 text-center">
+                <a href="index.html" class="name_under">WayToTip</a>
+                <p class="m-0 under_info">© WayToTip.ru 2024</p>
+            </div>
+            <ul class="nav col-md-8 justify-content-center mb-3 mt-3">
+                <li class="nav-item menu-under">
+                    <a href="#" class="nav-link px-2 under_info">Контакты</a>
+                </li>
+                <li class="nav-item menu-under">
+                    <a href="#" class="nav-link px-2 under_info">Пользовательское соглашение</a>
+                </li>
+                <li class="nav-item menu-under">
+                    <a href="#" class="nav-link px-2 under_info">Политика конфиденциальности</a>
+                </li>
+            </ul>
+            <div class="col-md-2 mb-3 mt-3 text-lg-end">
+                <!--Переключатель тем-->
+                <button onclick="theme()" class="btn btn-primary border border-0 theme-color-under">
+                    <i id="icon-theme" class="bi bi-sun"></i>
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+    <script>
+        function OpenForm() {
+            document.getElementById('open').style.display = 'none';
+            document.getElementById('OpenForm').style.display = 'block';
+        }
+    </script>
+    <script>
+        $(".phone").mask("+7(999)999-9999");
+    </script>
+    <script>
+        $('#per').click(function(){
+	        $('input[name="rad"][value="1"]').trigger('click');
+        });
+    </script>
+    <script>
+        $('#oferta').click(function(){
+	        $('input[name="rad"][value="5"]').trigger('click');
+        });
+    </script>
+    <script src="public/js/theme-switcher.js"></script>
+    <script src="public/js/password.js"></script>
+    <script src="public/js/password-retry.js"></script>
+    <script>
+        function resetForm() {
+            document.getElementById('OpenForm').reset();
+        }
+    </script>
+</body>
+</html>

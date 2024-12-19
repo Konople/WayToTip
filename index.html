@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+    <script src="/docs/5.3/assets/js/color-modes.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="public/css/style.css">
+    <title>WayToTip</title>
+</head>
+<body>
+    <!--Шапка-->
+    <nav class="navbar navbar-expand-lg bg-body text-center sticky-top py-3">
+        <div class="container-fluid">
+            <a class="name navbar-brand" href="index.html">WayToTip</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">О компании</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Как начать</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Персоналу</a>
+                        <ul class="dropdown-menu text-center">
+                            <li><a class="dropdown-item" href="#">Официантам</a></li>
+                            <li><a class="dropdown-item" href="#">Парикмахерам</a></li>
+                            <li><a class="dropdown-item" href="#">Барменам</a></li>
+                            <li><a class="dropdown-item" href="#">Курьерам</a></li>
+                            <li><a class="dropdown-item" href="#">Таксистам</a></li>
+                            <li><a class="dropdown-item" href="#">Автомойщикам</a></li>
+                            <li><a class="dropdown-item" href="#">Врачам</a></li>
+                            <li><a class="dropdown-item" href="#">Тренерам</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Бизнесу</a>
+                        <ul class="dropdown-menu text-center">
+                            <li><a class="dropdown-item" href="#">Ресторанам</a></li>
+                            <li><a class="dropdown-item" href="#">Парикмахерским</a></li>
+                            <li><a class="dropdown-item" href="#">Барам</a></li>
+                            <li><a class="dropdown-item" href="#">Центрам доставки</a></li>
+                            <li><a class="dropdown-item" href="#">Таксопаркам</a></li>
+                            <li><a class="dropdown-item" href="#">Автомойкам</a></li>
+                            <li><a class="dropdown-item" href="#">Больницам</a></li>
+                            <li><a class="dropdown-item" href="#">Тренажёрным залам</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!--Переключатель тем-->
+                <button onclick="theme()" class="btn btn-primary border border-0 theme-color">
+                    <i id="icon-theme" class="bi bi-sun"></i>
+                </button>
+                
+                <a class="btn btn-primary border border-0 regist text-white reg-m" href="login.html" role="button">Войти</a>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <!--Краткое описание услуги-->
+    <main class="container">
+        <div class="row d-flex flex-wrap align-items-center">
+            <div class="col-md mt-4 tiptext">
+                <h1 class="mb-4">Принимайте оплату чаевых картой</h1>
+                <p>Принимайте чаевые с карты удобно, оперативно и безопасно. Регистрация за минуту, мгновенный перевод средств на карту</p>
+                <a href="registration.html" class="btn btn-primary border border-0 regist text-white mt-4 regist-phone">Зарегистрироваться</a>
+            </div>
+            <div class="col-md text-center mt-5">
+                <img src="public/img/Tips.svg" alt="Чаевые" class="img-fluid cartinka tip">
+            </div>
+        </div>
+    </main>
+
+
+
+    <!--Пошаговое описание работы сервиса-->
+    <main class="container mt-4">
+        <h2 class="text-center">Как это работает</h2>
+        <div class="row text-center">
+            <div class="col-md">
+                <img src="public/img/Regist.svg" alt="создания профиля" class="img-fluid step cartinka">
+                <div class="mt-4 mb-3 desc desc-1">
+                    <h5 class="text-center">Создание профиля</h5>
+                    <p>Работник регистрируется на платформе и привязывает свой счет или электронный кошелек.</p>
+                </div>
+            </div>
+            <div class="col-md">
+                <img src="public/img/Code.svg" alt="QR-код" class="img-fluid step cartinka">
+                <div class="mt-4 mb-3 desc desc-2">
+                    <h5 class="text-center">Получение QR-кода</h5>
+                    <p>Платформа генерирует уникальный QR-код, который сотрудник может разместить на своем рабочем месте или на личной карточке.</p>
+                </div>
+            </div>
+            <div class="col-md">
+                <img src="public/img/Pay.svg" alt="Оплата" class="img-fluid step cartinka">
+                <div class="mt-4 mb-3 desc desc-2">
+                    <h5 class="text-center">Перевод чаевых</h5>
+                    <p>Клиент сканирует QR-код, выбирает сумму чаевых и переводит деньги с помощью карты или мобильного платежа.</p>
+                </div>
+            </div>
+            <div class="col-md">
+                <img src="public/img/Complete.svg" alt="Выполнено" class="img-fluid step cartinka">
+                <div class="mt-4 mb-3 desc desc-3">
+                    <h5 class="text-center">Мгновенное получение</h5>
+                    <p>Сотрудник моментально получает чаевые на свой счет и может отслеживать их в своем профиле на WayToTip.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+    <!--Оплата через сервисы-->
+    <main class="container mt-4">
+        <div class="pay_back row m-1 p-3">
+            <div class="col-md d-flex flex-column align-self-center tip-text">
+                <h2>Как оплатить</h2>
+                <p>Гости и клиенты могут оставить электронные чаевые, используя карту или платежные системы через QR-код. Для этого достаточно смартфона, приложения устанавливать не требуется.</p>
+            </div>
+            <div class="col-md d-flex justify-content-center">
+                <img src="public/img/Service.svg" alt="Сервисы" class="img-fluid pay-pay cartinka">
+            </div>
+        </div>
+    </main>
+
+
+
+    <!--Вывод средств-->
+    <main class="container mt-4">
+        <div class="row">
+            <div class="col-md">
+                <img src="public/img/Money.svg" alt="Деньги" class="img-fluid cartinka">
+            </div>
+            <div class="col-md d-flex flex-column align-self-center tip-text">
+                <h2>Выводите свои средства мгновенно!</h2>
+                <p>Средства выводятся мгновенно, требуется лишь указать номер карты, выпущенной в России.</p>
+            </div>
+        </div>
+    </main>
+
+
+
+    <!--Применение сервиса-->
+    <main class="container mt-4">
+        <div class="row pay_back m-1 p-3">
+            <div class="col-lg-6 col-md-12 col-sm-12 pay_text d-flex flex-column align-self-center tip-text">
+                <h2>Кто пользуется нашими услугами</h2>
+                <p>"Для всех, кто получает чаевые. У гостей или клиентов часто либо нет наличных, либо нет купюр мелкого номинала."</p>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm d-flex flex-column align-self-center jobs">
+                <div class="d-flex justify-content-center mb-3">
+                    <div class="btn-group me-2" role="group" aria-label="Первая группа">
+                        <a href="server.html" type="button" class="btn">Официанты</a>
+                    </div>
+                    <div class="btn-group" role="group" aria-label="Первая группа">
+                        <a href="barber.html" type="button" class="btn">Парикмахеры</a>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center mb-3">
+                    <div class="btn-group me-2" role="group" aria-label="Вторая группа">
+                        <a href="barmen.html" type="button" class="btn">Бармены</a>
+                    </div>
+                    <div class="btn-group" role="group" aria-label="Вторая группа">
+                        <a href="courier.html" type="button" class="btn">Курьеры</a>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center mb-3">
+                    <div class="btn-group me-2" role="group" aria-label="Вторая группа">
+                        <a href="taxi_driver.html" type="button" class="btn">Таксисты</a>
+                    </div>
+                    <div class="btn-group" role="group" aria-label="Вторая группа">
+                        <a href="car_washer.html" type="button" class="btn">Автомойщики</a>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <div class="btn-group me-2" role="group" aria-label="Вторая группа">
+                        <a href="doctor.html" type="button" class="btn">Врачи</a>
+                    </div>
+                    <div class="btn-group" role="group" aria-label="Вторая группа">
+                        <a href="trainer.html" type="button" class="btn">Тренеры</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm d-flex align-items-center justify-content-center">
+                <img id="bar" src="public/img/Job.svg" alt="Профессия" class="img-fluid prof">
+            </div>
+        </div>
+    </main>
+
+
+    
+    <!--Интеграция в кассовые системы-->
+    <main class="container mt-4">
+        <div class="row">
+            <div class="col-md">
+                <img src="public/img/Integration.svg" alt="Интеграция" class="img-fluid cartinka">
+            </div>
+            <div class="col-md d-flex flex-column align-self-center tip-text">
+                <h2>Внедрение в кассовые системы</h2>
+                <p>Наш сервис легко интегрируется с системой автоматизации вашего ресторана, позволяя печатать QR-коды сотрудников на чеках. Специалисты нашей технической поддержки помогут настроить плагин для подключения.</p>
+            </div>
+        </div>
+    </main>
+
+
+
+    <!--Для администраторов-->
+    <main class="container mt-4">
+        <div class="row tip-text">
+            <div class="col-md">
+                <h2>Для бизнесменов</h2>
+                <p>Вы желаете внедрить сервис WayToTip в свою компанию? Зарегистрируйтесь как администратор, и вы получите следующие возможности:</p>
+                <ul class="list-group">
+                    <li class="list-group-item admin">- подключить нескольких сотрудников одновременно;</li>
+                    <li class="list-group-item admin">- отслеживать поступления чаевых, которые служат показателем качества работы персонала;</li>
+                    <li class="list-group-item admin">- массово распечатать визитки, не дожидаясь самостоятельной регистрации сотрудников.</li>
+                </ul>
+                <a href="registration.html" class="btn btn-info border border-0 text-white regist mt-4">Начать как администратор</a>
+                <p class="mt-4">С нашим сервисом ваш персонал будет получать больше чаевых, и для вас это абсолютно бесплатно. Мы полностью возьмём на себя все бухгалтерские и юридические аспекты.</p>
+            </div>
+            <div class="col-md d-flex align-items-center justify-content-center">
+                <img src="public/img/Admin.svg" alt="админ" class="img-fluid cartinka">
+            </div>
+        </div>
+    </main>
+
+
+
+    <!--Где использовать QR-код?-->
+    <main class="container mt-4">
+        <h2 class="text-center">Где можно использовать QR-код</h2>
+        <div class="row text-center">
+            <div class="col-md">
+                <div class="p-3 mb-4 pay_back">
+                    <h5 class="mb-3">На визитках</h5>
+                    <img src="public/img/Visitka.svg" alt="Визитка" class="img-fluid cartinka">
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="p-3 mb-4 pay_back">
+                    <h5 class="mb-3">На наклейках</h5>
+                    <img src="public/img/Sticker.svg" alt="Наклейка" class="img-fluid cartinka">
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="p-3 pay_back">
+                    <h5 class="mb-3">На чеках</h5>
+                    <img src="public/img/Check.svg" alt="Чек" class="img-fluid cartinka">
+                </div>
+            </div>
+        </div>
+        <div class="row text-center mt-4">
+            <div class="col-md">
+                <div class="p-3 mb-4 pay_back">
+                    <h5 class="mb-3">На телефоне</h5>
+                    <img src="public/img/Demonstrate.svg" alt="Телефон" class="img-fluid cartinka">
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="p-3 mb-4 pay_back">
+                    <h5 class="mb-3">На бейджике</h5>
+                    <img src="public/img/Beydg.svg" alt="Бейджик" class="img-fluid cartinka">
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="p-3 pay_back">
+                    <h5 class="mb-3">В виде ссылки</h5>
+                    <img src="public/img/Comment.svg" alt="Ссылка" class="img-fluid cartinka">
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+    <!--Плюсы сервиса-->
+    <main class="container mt-4">
+        <h2 class="text-center">WayToTip - это удобство и скорость!</h2>
+        <div class="row">
+            <div class="col-md">
+                <div class="p-3 mb-4 pay_back">
+                    <h5 class="mt-3">Увеличение дохода</h5>
+                    <p>Персонал получает больше чаевых от благодарных клиентов.</p>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="p-3 pay_back">
+                    <h5 class="mt-3">Бесплатное использование</h5>
+                    <p>Сервис не требует затрат на подключение и обслуживание.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md">
+                <div class="p-3 mb-4 pay_back">
+                    <h5 class="mt-3">Автоматизация процессов</h5>
+                    <p>Полная поддержка бухгалтерских и юридических вопросов.</p>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="p-3 pay_back">
+                    <h5 class="mt-3">Простая интеграция</h5>
+                    <p>Быстрое подключение к системам вашего бизнеса.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md">
+                <div class="p-3 mb-4 pay_back">
+                    <h5 class="mt-3">Безопасность</h5>
+                    <p>Гарантированная защита данных и безопасные платежи.</p>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="p-3 pay_back">
+                    <h5 class="mt-3">Удобство контроля</h5>
+                    <p>Возможность отслеживать чаевые и оценивать работу сотрудников.</p>
+                </div>
+            </div>
+        </div>    
+    </main>
+
+
+
+    <!--Комиссия-->
+    <main class="container mt-4">
+        <h2 class="text-center">Cколько это стоит</h2>
+        <div class="container">
+            <div class="d-flex justify-content-center align-items-center flex-wrap">
+                <img src="public/img/Zero.svg" alt="Ноль" class="img-fluid cartinka">
+                <p class="mt-2 tip-text">Всё прозрачно и честно: ни копейки сверху — ни для сотрудников, ни для заведения!<br> Никаких скрытых платежей и абонентских сборов!<br> Полный контроль над финансами и справедливая система распределения доходов."</p>
+            </div>
+        </div>
+    </main>
+
+
+
+    <!--Начало-->
+    <main class="container mt-4">
+        <div class="pay_back lets text-white m-1 p-5">
+            <div class="text-center">
+                <h2 class="mb-3">Давайте начнём!</h2>
+                <p>На регистрацию уйдёт минута, прямо сейчас получайте чаевые.</p>
+                <a href="registration.html" class="btn border border-0 regist_2 mt-3">Регистрация</a>
+            </div>
+        </div>
+    </main>
+
+
+
+    <!--Вопрос-ответ-->
+    <main class="container mt-4">
+        <h2 class="text-center">Вопрос-ответ</h2>
+        <div class="container">
+            <div class="mb-4">
+                <div class="card m-0 border border-0">
+                    <a class="card-body btn py-3 question" data-bs-toggle="collapse" href="#answer" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        Как осуществляется добавление QR-кода в пречек?
+                    </a>
+                </div>
+                <div class="collapse" id="answer">
+                    <div class="card card-body border border-0">
+                        <p class="m-0">Чтобы добавить QR-код в предчек, установите наш плагин для вашей системы автоматизации — он совместим с iiko и R-keeper. Просто зарегистрируйтесь, а затем подайте заявку в разделе «Компания ⇨ Интеграции» в личном кабинете, и плагин будет готов к работе!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-4">
+                <div class="card m-0 border border-0">
+                    <a class="btn py-3 question" data-bs-toggle="collapse" href="#answer_2" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        Как выводить свои средства?
+                    </a>
+                </div>
+                <div class="collapse" id="answer_2">
+                    <div class="card card-body border border-0">
+                        <p class="m-0">Чтобы вывести средства из сервиса, войдите в личный кабинет на сайте или в приложении, перейдите в раздел «Переводы ⇨ Вывод на карту», укажите реквизиты и сумму. Деньги поступят на карту уже через минуту.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-4">
+                <div class="card m-0 border border-0">
+                    <a class="btn py-3 question" data-bs-toggle="collapse" href="#answer_3" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        Тарифы сервиса WayToTip
+                    </a>
+                </div>
+                <div class="collapse" id="answer_3">
+                    <div class="card card-body border border-0">
+                        <p class="m-0">Для всех пользователей сервиса установлен единый тариф — всегда 0%. Никаких абонентских плат и скрытых платежей.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-4">
+                <div class="card m-0 border border-0">
+                    <a class="btn py-3 question" data-bs-toggle="collapse" href="#answer_4" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        Как получить визитки с qr-кодом?
+                    </a>
+                </div>
+                <div class="collapse" id="answer_4">
+                    <div class="card card-body border border-0">
+                        <p class="m-0">После регистрации в сервисе вы сможете сразу создать макеты визиток, наклеек и карточек с вашим QR-кодом и отправить их на печать. Также в разделе "Печать" можно заказать готовые печатные материалы с доставкой. Менеджер свяжется с вами для уточнения адреса и способа доставки после оформления заказа.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-4">
+                <div class="card m-0 border border-0">
+                    <a class="btn py-3 question" data-bs-toggle="collapse" href="#answer_5" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        Какая минимальная сумма вывода денег?
+                    </a>
+                </div>
+                <div class="collapse" id="answer_5">
+                    <div class="card card-body border border-0">
+                        <p class="m-0">Вы можете перевести чаевые на любую банковскую карту без комиссии.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+    <!--Подвал-->
+    <footer class="d-flex under p-3">
+        <div class="container d-flex justify-content-center flex-wrap align-items-center px-3">
+            <div class="d-flex flex-column flex-wrap col-md-4 mb-3 text-center">
+                <a href="index.html" class="name">WayToTip</a>
+                <p class="under_info">© Copyright 2024 by WayToTip.ru All Rights Reserved.</p>
+            </div>
+            <div class="col-md-4 d-flex flex-column text-center mb-3">
+                <a href="#" class="under_info">Контакты</a>
+                <a href="#" class="under_info">Пользовательское соглашение</a>
+                <a href="#" class="under_info">Политика конфиденциальности</a>
+            </div>
+            <ul class="nav col-md-4 justify-content-end">
+                <li class="nav-item menu-under">
+                    <a href="#" class="nav-link px-2 under_info">О компании</a>
+                </li>
+                <li class="nav-item menu-under">
+                    <a href="#" class="nav-link px-2 under_info">Как начать</a>
+                </li>
+                <li class="nav-item menu-under">
+                    <a href="#" class="nav-link px-2 under_info">Персоналу</a>
+                </li>
+                <li class="nav-item menu-under">
+                    <a href="#" class="nav-link px-2 under_info">Бизнесу</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="public/js/theme-switcher.js"></script>
+    <script src="public/js/button.js"></script>
+</body>
+</html>
