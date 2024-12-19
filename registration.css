@@ -1,6 +1,6 @@
 /*Поле регистрации/авторизации*/
 .reg_back {
-    background: url(img/registration/background.svg) center top;
+    background: url(../registration/background.svg) center top;
 }
 @media (max-width: 1060px) {
     .reg_back {
@@ -9,7 +9,7 @@
 }
 
 .reg_back-dark {
-    background: url(img/registration/background_dark.svg);
+    background: url(../registration/background_dark.svg);
 }
 @media (max-width: 1060px) {
     .reg_back-dark {
